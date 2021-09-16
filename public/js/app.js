@@ -2,6 +2,8 @@ const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const mstwo = document.querySelector('#mstwo');
 const msone = document.querySelector('#msone');
+const ms3 = document.querySelector('#ms3');
+const ms4 = document.querySelector('#ms4');
 
 
 
@@ -15,8 +17,10 @@ weatherForm.addEventListener('submit', (e)=>{
             if (data.error) {
                 mstwo.textContent= data.error;
             } else {
-             mstwo.textContent='address: ' + data.address + ' forecast: ' +data.forecast;
-             msone.textContent=' location: '+data.location + ' temperature: '+data.temperature;
+             mstwo.textContent = 'address: ' + data.address;
+             ms3.textContent = ' forecast: ' +data.forecast;
+             msone.textContent = ' location: '+data.location;
+             ms4.textContent = ' temperature: '+data.temperature;
             }
         })
 
